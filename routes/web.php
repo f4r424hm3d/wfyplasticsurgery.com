@@ -3,6 +3,8 @@
 
 use App\Http\Controllers\admin\AdminDashboard;
 use App\Http\Controllers\admin\AdminLogin;
+use App\Http\Controllers\admin\BeforeAfterCategoryC;
+use App\Http\Controllers\admin\BeforeAfterPhotoC;
 use App\Http\Controllers\admin\BlogC;
 use App\Http\Controllers\admin\BlogCategoryC;
 use App\Http\Controllers\admin\DynamicPageSeoC;
@@ -240,6 +242,22 @@ Route::middleware(['adminLoggedIn'])->group(function () {
       Route::get('/update/{id}', [FaqC::class, 'index']);
       Route::post('/update/{id}', [FaqC::class, 'update']);
       Route::post('/store-ajax', [FaqC::class, 'storeAjax']);
+    });
+    Route::prefix('/before-after-categories')->group(function () {
+      Route::get('', [BeforeAfterCategoryC::class, 'index']);
+      Route::get('get-data', [BeforeAfterCategoryC::class, 'getData']);
+      Route::get('/delete/{id}', [BeforeAfterCategoryC::class, 'delete']);
+      Route::get('/update/{id}', [BeforeAfterCategoryC::class, 'index']);
+      Route::post('/update/{id}', [BeforeAfterCategoryC::class, 'update']);
+      Route::post('/store-ajax', [BeforeAfterCategoryC::class, 'storeAjax']);
+    });
+    Route::prefix('/before-after-photos')->group(function () {
+      Route::get('', [BeforeAfterPhotoC::class, 'index']);
+      Route::get('get-data', [BeforeAfterPhotoC::class, 'getData']);
+      Route::get('/delete/{id}', [BeforeAfterPhotoC::class, 'delete']);
+      Route::get('/update/{id}', [BeforeAfterPhotoC::class, 'index']);
+      Route::post('/update/{id}', [BeforeAfterPhotoC::class, 'update']);
+      Route::post('/store-ajax', [BeforeAfterPhotoC::class, 'storeAjax']);
     });
     Route::prefix('/static-page-seo')->group(function () {
       Route::get('', [StaticPageSeoC::class, 'index']);
