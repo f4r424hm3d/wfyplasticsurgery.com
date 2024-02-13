@@ -17,6 +17,7 @@ use App\Http\Controllers\admin\TreatmentFaqC;
 use App\Http\Controllers\admin\TreatmentOverviewC;
 use App\Http\Controllers\admin\TreatmentPhotoC;
 use App\Http\Controllers\admin\TreatmentSubCategoryC;
+use App\Http\Controllers\admin\TreatmentTestimonialC;
 use App\Http\Controllers\admin\TreatmentVideoC;
 use App\Http\Controllers\admin\UserC;
 use App\Http\Controllers\CommonController;
@@ -185,7 +186,6 @@ Route::middleware(['adminLoggedIn'])->group(function () {
     });
     Route::prefix('/treatment/photos/')->group(function () {
       Route::get('get-data', [TreatmentPhotoC::class, 'getData']);
-      Route::post('/import', [TreatmentPhotoC::class, 'import']);
       Route::get('/delete/{id}', [TreatmentPhotoC::class, 'delete']);
       Route::post('/store-ajax', [TreatmentPhotoC::class, 'storeAjax']);
       Route::get('/{treatment_id}/', [TreatmentPhotoC::class, 'index']);
@@ -200,6 +200,14 @@ Route::middleware(['adminLoggedIn'])->group(function () {
       Route::get('/{treatment_id}/', [TreatmentVideoC::class, 'index']);
       Route::get('/{treatment_id}/update/{id}', [TreatmentVideoC::class, 'index']);
       Route::post('/{treatment_id}/update/{id}', [TreatmentVideoC::class, 'update']);
+    });
+    Route::prefix('/treatment/testimonials/')->group(function () {
+      Route::get('get-data', [TreatmentTestimonialC::class, 'getData']);
+      Route::get('/delete/{id}', [TreatmentTestimonialC::class, 'delete']);
+      Route::post('/store-ajax', [TreatmentTestimonialC::class, 'storeAjax']);
+      Route::get('/{treatment_id}/', [TreatmentTestimonialC::class, 'index']);
+      Route::get('/{treatment_id}/update/{id}', [TreatmentTestimonialC::class, 'index']);
+      Route::post('/{treatment_id}/update/{id}', [TreatmentTestimonialC::class, 'update']);
     });
     Route::prefix('/blog-categories')->group(function () {
       Route::get('', [BlogCategoryC::class, 'index']);

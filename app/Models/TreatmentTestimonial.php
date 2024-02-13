@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class TreatmentTestimonial extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  public function treatment()
+  {
+    return $this->hasOne(Treatment::class, 'id', 'treatment_id');
+  }
 }

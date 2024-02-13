@@ -10,7 +10,7 @@
         <div class="col-12">
           <div class="page-title-box d-sm-flex align-items-center justify-content-between">
             <h4 class="mb-sm-0 font-size-18">
-              {{ $page_title }} <span class="text-danger">[ {{ $hospital->hospital_name }} ]
+              {{ $page_title }} <span class="text-danger">[ {{ $treatment->treatment_name }} ]
             </h4>
             <div class="page-title-right">
               <ol class="breadcrumb m-0">
@@ -21,21 +21,12 @@
           </div>
         </div>
       </div>
-      @include('admin.hospital-profile-header')
+      @include('admin.treatment-profile-header')
       <div class="row">
         <div class="col-xl-12">
-          @if (session()->has('smsg'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-              {{ session()->get('smsg') }}
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          @endif
-          @if (session()->has('emsg'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              {{ session()->get('emsg') }}
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-          @endif
+          <!-- NOTIFICATION FIELD START -->
+          <x-ResultNotificationField></x-ResultNotificationField>
+          <!-- NOTIFICATION FIELD END -->
         </div>
       </div>
       <div class="row">
@@ -51,21 +42,44 @@
               </h4>
             </div>
             <div class="card-body" id="tblCDiv">
-              <form id="dataForm" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+              <form id="{{ $ft == 'add' ? 'dataForm' : 'editForm' }}" {{ $ft == 'edit' ? 'action=' . $url : '' }}
+                class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
                 @csrf
                 <div class="row">
-                  <input type="hidden" name="hospital_id" id="hospital_id" value="{{ $hospital->id }}">
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <x-MultipleSelectField label="Select Accreditation" name="accreditation_id" id="accreditation_id"
-                      :ft="$ft" :sd="$sd" :list="$accreditations" showv="title"
-                      savev="id"></x-MultipleSelectField>
+                  <input type="hidden" name="treatment_id" id="treatment_id" value="{{ $treatment->id }}">
+                  <div class="col-md-3 col-sm-12 mb-3">
+                    <x-InputField type="text" label="Enter User Name" name="user_name" id="user_name" :ft="$ft"
+                      :sd="$sd" required="required">
+                    </x-InputField>
+                  </div>
+                  <div class="col-md-3 col-sm-12 mb-3">
+                    <x-InputField type="file" label="Upload photos" name="photo" id="photo" :ft="$ft"
+                      :sd="$sd">
+                    </x-InputField>
+                  </div>
+                  <div class="col-md-3 col-sm-12 mb-3">
+                    <x-InputField type="number" label="Enter Rating" name="rating" id="rating" :ft="$ft"
+                      :sd="$sd" required="required">
+                    </x-InputField>
+                  </div>
+                  <div class="col-md-3 col-sm-12 mb-3">
+                    <x-InputField type="text" label="Enter Review Title" name="review_title" id="review_title"
+                      :ft="$ft" :sd="$sd" required="required">
+                    </x-InputField>
+                  </div>
+                  <div class="col-md-12 col-sm-12 mb-3">
+                    <x-TextareaField label="Enter Review" name="review" id="review" :ft="$ft"
+                      :sd="$sd" required="required">
+                    </x-TextareaField>
                   </div>
                 </div>
                 @if ($ft == 'add')
                   <button type="reset" class="btn btn-sm btn-warning  mr-1"><i class="ti-trash"></i> Reset</button>
                 @endif
                 @if ($ft == 'edit')
-                  <a href="{{ aurl($page_route) }}" class="btn btn-sm btn-info "><i class="ti-trash"></i> Cancel</a>
+                  <a href="{{ aurl($page_route . '/' . $treatment->id) }}" class="btn btn-sm btn-info "><i
+                      class="ti-trash"></i>
+                    Cancel</a>
                 @endif
                 <button class="btn btn-sm btn-primary" type="submit">Submit</button>
               </form>
@@ -86,6 +100,13 @@
     </div>
   </div>
   <script>
+    function clearFilter() {
+      var h = 'Success';
+      var msg = 'Filter cleared';
+      var type = 'success';
+      showToastr(h, msg, type);
+      getData();
+    }
     $.ajaxSetup({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -125,7 +146,6 @@
                 var type = 'danger';
               }
               $('#dataForm')[0].reset();
-              $('#procedure_id').html("");
             } else {
               //alert(data.error);
               printErrorMsg(data.error);
@@ -137,9 +157,22 @@
           }
         })
       });
+
+      $('#filterForm').on('submit', function(event) {
+        event.preventDefault();
+        $("#filterSubmitBtn").text('Filtering...');
+        setTimeout(() => {
+          $(".errSpan").text('');
+          var treatment_id = $("#f_hospital_id").val();
+          //alert(treatment_id);
+          getData('1', treatment_id);
+          $("#filterSubmitBtn").text('Submit');
+        }, 1000);
+      });
     });
 
     function printErrorMsg(msg) {
+      //console.log(msg);
       $.each(msg, function(key, value) {
         $("#" + key + "-err").text(value);
       });
@@ -153,7 +186,8 @@
       } else {
         var page = '{{ $page_no }}';
       }
-      var hospital_id = '{{ $hospital->id }}';
+      var treatment_id = '{{ $treatment->id }}';
+      //alert(page+treatment_id);
       return new Promise(function(resolve, reject) {
         //$("#migrateBtn").text('Migrating...');
         setTimeout(() => {
@@ -162,7 +196,7 @@
             method: "GET",
             data: {
               page: page,
-              hospital_id: hospital_id,
+              treatment_id: treatment_id,
             },
             success: function(data) {
               $("#trdata").html(data);
@@ -172,6 +206,33 @@
             // $("#migrateBtn").text('Migration Failed');
           });
         });
+      });
+    }
+
+    function changeStatus(id, val) {
+      //alert(id);
+      var tbl = 'hospitals';
+      $.ajax({
+        url: "{{ url('common/change-status') }}",
+        method: "GET",
+        data: {
+          id: id,
+          tbl: tbl,
+          val: val
+        },
+        success: function(data) {
+          if (data == '1') {
+            //alert('status changed of ' + id + ' to ' + val);
+            if (val == '1') {
+              $('#asts' + id).toggle();
+              $('#ists' + id).toggle();
+            }
+            if (val == '0') {
+              $('#asts' + id).toggle();
+              $('#ists' + id).toggle();
+            }
+          }
+        }
       });
     }
 
