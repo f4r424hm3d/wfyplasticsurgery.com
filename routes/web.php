@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\DynamicPageSeoC;
 use App\Http\Controllers\admin\FacilityC;
 use App\Http\Controllers\admin\FaqC;
 use App\Http\Controllers\admin\FaqCategoryC;
+use App\Http\Controllers\admin\LeadC;
 use App\Http\Controllers\admin\StaticPageSeoC;
 use App\Http\Controllers\admin\TreatmentC;
 use App\Http\Controllers\admin\TreatmentCategoryC;
@@ -23,10 +24,14 @@ use App\Http\Controllers\admin\TreatmentTestimonialC;
 use App\Http\Controllers\admin\TreatmentVideoC;
 use App\Http\Controllers\admin\UserC;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\front\BeforeAfterFc;
 use App\Http\Controllers\front\BlogFc;
+use App\Http\Controllers\front\FaqFc;
 use App\Http\Controllers\front\HomeFc;
 use App\Http\Controllers\front\InquiryController;
 use App\Http\Controllers\front\LiveTeleConsultationFc;
+use App\Http\Controllers\front\TestimonialFc;
+use App\Http\Controllers\front\TreatmentFc;
 use App\Http\Controllers\front\TreatmentListFc;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -99,18 +104,15 @@ Route::get('/f/migrate', function () {
 
 /* FRONT ROUTE */
 Route::get('/', [HomeFc::class, 'index']);
-Route::get('search-hospitals-and-doctors', [HomeFc::class, 'searchHospitalDoctors']);
 Route::get('/about-us', [HomeFc::class, 'about']);
-Route::get('/how-we-do', [HomeFc::class, 'whatWeDo']);
 Route::get('/contact-us', [HomeFc::class, 'contactUs']);
 Route::get('/thank-you', [HomeFc::class, 'thankYou']);
 Route::get('get-free-quote', [HomeFc::class, 'getFreeQuote']);
-Route::get('live-tele-consultations', [LiveTeleConsultationFc::class, 'index']);
+Route::get('testimonials', [TestimonialFc::class, 'index']);
+Route::get('faqs', [FaqFc::class, 'index']);
+Route::get('before-after', [BeforeAfterFc::class, 'index']);
 
-
-Route::get('/treatments', [TreatmentListFc::class, 'index']);
-Route::get('/treatments/{department_slug}', [TreatmentListFc::class, 'detailPage']);
-Route::get('/treatments/{department_slug}/{procedure_slug}', [TreatmentListFc::class, 'procedureDetailPage']);
+Route::get('/treatment/{treatment_slug}', [TreatmentFc::class, 'index']);
 
 Route::get('/blog/', [BlogFc::class, 'index']);
 Route::get('/blog/{category_slug}/', [BlogFc::class, 'blogByCategory']);
@@ -289,6 +291,18 @@ Route::middleware(['adminLoggedIn'])->group(function () {
       Route::get('/update/{id}', [FacilityC::class, 'index']);
       Route::post('/update/{id}', [FacilityC::class, 'update']);
       Route::post('/store-ajax', [FacilityC::class, 'storeAjax']);
+    });
+    Route::prefix('leads')->group(function () {
+      Route::get('', [LeadC::class, 'index']);
+      Route::get('/add', [LeadC::class, 'add']);
+      Route::post('/store', [LeadC::class, 'store']);
+      Route::get('get-quick-info', [LeadC::class, 'getQuickInfo']);
+      Route::get('/update-quick-info/', [LeadC::class, 'updateQuickInfo']);
+      Route::get('/fetch-last-updated-record/{id}', [LeadC::class, 'fetchLastRecord']);
+
+
+      Route::get('/add2', [LeadC::class, 'add2']);
+      Route::post('/store-ajax', [LeadC::class, 'storeAjax']);
     });
   });
 });

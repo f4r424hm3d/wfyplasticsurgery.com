@@ -12,4 +12,8 @@ class TreatmentSubCategory extends Model
   {
     return $this->hasOne(TreatmentCategory::class, 'id', 'category_id');
   }
+  public function treatments()
+  {
+    return $this->hasMany(Treatment::class, 'sub_category_id', 'id');
+  }
 }

@@ -222,6 +222,12 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle arrow-none" href="{{ url('admin/leads') }}" id="topnav-dashboard"
+                  role="button">
+                  <i data-feather="users"></i><span data-key="t-dashboards">Leads</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more" role="button">
                   <i data-feather="file-text"></i>
                   <span data-key="t-extra-pages">Treatments</span>

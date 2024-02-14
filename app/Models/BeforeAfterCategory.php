@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class BeforeAfterCategory extends Model
 {
-    use HasFactory;
+  use HasFactory;
+  public function photos()
+  {
+    return $this->hasMany(BeforeAfterGallery::class, 'category_id', 'id');
+  }
 }
