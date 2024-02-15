@@ -42,4 +42,8 @@ class HomeFc extends Controller
     $data = compact('countries', 'codes', 'showName', 'showImage', 'doctor_id', 'hospital_id');
     return view('front.get-free-quote')->with($data);
   }
+  public function thankYou(Request $request)
+  {
+    return view('front.thank-you');
+  }
 }

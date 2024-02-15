@@ -111,7 +111,7 @@ Route::get('get-free-quote', [HomeFc::class, 'getFreeQuote']);
 Route::get('testimonials', [TestimonialFc::class, 'index']);
 Route::get('faqs', [FaqFc::class, 'index']);
 Route::get('before-after', [BeforeAfterFc::class, 'index']);
-
+Route::get('/thank-you', [HomeFc::class, 'thankYou']);
 Route::get('/treatment/{treatment_slug}', [TreatmentFc::class, 'index']);
 
 Route::get('/blog/', [BlogFc::class, 'index']);

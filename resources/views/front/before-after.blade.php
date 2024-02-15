@@ -24,7 +24,7 @@
               @endphp
               @foreach ($categories as $row)
                 <li><a href="#{{ $row->category_slug }}" class="{{ $i == 1 ? 'active' : '' }}"><i
-                      class="icon_document_alt"></i>{{ $row->category_name }}</a></li>
+                      class="icon_images"></i>{{ $row->category_name }}</a></li>
                 @php
                   $i++;
                 @endphp
