@@ -34,14 +34,14 @@
             <div class="box_general_3">
               <p><img alt="{{ $treatment->treatment_name }}" class="img-fluid" src="{{ asset($treatment->image_path) }}">
               </p>
-              <div class="author pt-0 mb-4">
+              {{-- <div class="author pt-0 mb-4">
                 <div class="img-div"><img src="{{ asset($treatment->author->profile_picture) }}" alt="Author"><i
                     class="fa fa-check-circle"></i>
                 </div>
                 <div class="cont-div"><a href="{{ url('author') }}">{{ $treatment->author->name }}</a><span>Updated on -
                     {{ getFormattedDate($treatment->updated_at, 'd M, Y') }}</span>
                 </div>
-              </div>
+              </div> --}}
 
               @if ($treatment->overviews->count() > 0)
                 @foreach ($treatment->overviews as $row)
@@ -177,8 +177,7 @@
                               class="indicator icon_plus_alt2"></i>Q: {{ $row->question }}</a>
                         </h5>
                       </div>
-                      <div id="collapse{{ $row->id }}" class="collapse" role="tabpanel"
-                        data-bs-parent="#payment">
+                      <div id="collapse{{ $row->id }}" class="collapse" role="tabpanel" data-bs-parent="#payment">
                         <div class="card-body">
                           <p><b>Ans:</b> {{ $row->answer }}</p>
                         </div>

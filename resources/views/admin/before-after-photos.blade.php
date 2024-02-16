@@ -51,14 +51,8 @@
                     </x-SelectField>
                   </div>
                   <div class="col-md-4 col-sm-12 mb-3">
-                    <x-InputField type="file" label="Upload Before Image" name="before" id="before"
-                      :ft="$ft" :sd="$sd">
-                    </x-InputField>
-                  </div>
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <x-InputField type="file" label="Upload After Image" name="after" id="after"
-                      :ft="$ft" :sd="$sd">
-                    </x-InputField>
+                    <x-MultipleInputField type="file" label="Photo" name="photo" id="photo" :ft="$ft"
+                      :sd="$sd"></x-MultipleInputField>
                   </div>
                 </div>
 

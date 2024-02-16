@@ -45,8 +45,7 @@ class BeforeAfterPhotoC extends Controller
       <tr>
         <th>Sr. No.</th>
         <th>Category</th>
-        <th>Before</th>
-        <th>After</th>
+        <th>Photo</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -55,17 +54,16 @@ class BeforeAfterPhotoC extends Controller
       $output .= '<tr id="row' . $row->id . '">
       <td>' . $i . '</td>
       <td>' . $row->category->category_name . '</td>
-      <td><a target="_blank" href="' . url($row->before_path) . '"><img src="' . asset($row->before_path) . '" height="100" width="100"></a></td>
-      <td><a target="_blank" href="' . url($row->after_path) . '"><img src="' . asset($row->after_path) . '" height="100" width="100"></a></td>
+      <td>
+      <a target="_blank" href="' . url($row->photo_path) . '">
+      <img src="' . asset($row->photo_path) . '" height="100" width="100">
+      </a>
+      </td>
       <td>
         <a href="javascript:void()" onclick="DeleteAjax(' . $row->id . ')"
           class="waves-effect waves-light btn btn-xs btn-outline btn-danger">
           <i class="fa fa-trash" aria-hidden="true"></i>
         </a>
-        <a href="' . url("admin/before-after-photos/update/" . $row->id) . '"
-                      class="waves-effect waves-light btn btn-xs btn-outline btn-info">
-                      <i class="fa fa-edit" aria-hidden="true"></i>
-                    </a>
       </td>
     </tr>';
       $i++;
@@ -74,7 +72,7 @@ class BeforeAfterPhotoC extends Controller
     $output .= '<div>' . $rows->links('pagination::bootstrap-5') . '</div>';
     return $output;
   }
-  public function storeAjax(Request $request)
+  public function storeAjaxOld(Request $request)
   {
     $validator = Validator::make($request->all(), [
       'category_id' => 'required',
@@ -115,6 +113,48 @@ class BeforeAfterPhotoC extends Controller
     }
     $field->category_id = $request['category_id'];
     $field->save();
+    return response()->json(['success' => 'Record hase been added succesfully.']);
+  }
+  public function storeAjax(Request $request)
+  {
+    $validator = Validator::make(
+      $request->all(),
+      [
+        'category_id' => 'required',
+        'photo.*' => 'required|max:5000|mimes:jpg,jpeg,png,gif,webp',
+      ],
+      [
+        'photo.*.required' => 'Please upload an image',
+        'photo.*.mimes' => 'Only jpg, jpeg, png and gif images are allowed',
+        'photo.*.max' => 'Sorry! Maximum allowed size for an image is 5MB',
+      ]
+    );
+
+    if ($validator->fails()) {
+      return response()->json([
+        'error' => $validator->errors(),
+      ]);
+    }
+
+    if ($request->hasFile('photo')) {
+      foreach ($request->file('photo') as $key => $file) {
+        $field = new BeforeAfterGallery;
+        $field->category_id = $request['category_id'];
+        $fileOriginalName = $file->getClientOriginalName();
+        $fileNameWithoutExtention = pathinfo($fileOriginalName, PATHINFO_FILENAME);
+        $file_name_slug = slugify($fileNameWithoutExtention);
+        $file_name = $file_name_slug . '-' . time() . '.' . $file->getClientOriginalExtension();
+        $move = $file->move('uploads/gallery/', $file_name);
+        if ($move) {
+          $field->photo_name = $file_name;
+          $field->photo_path = 'uploads/gallery/' . $file_name;
+        } else {
+          session()->flash('emsg', 'Images not uploaded.');
+        }
+        $field->save();
+      }
+    }
+
     return response()->json(['success' => 'Record hase been added succesfully.']);
   }
   public function delete($id)

@@ -46,14 +46,9 @@
                   <div class="row">
                     @foreach ($row->photos as $photo)
                       <div class="col-lg-3 mb-3">
-                        <a href="{{ asset($photo->before_path) }}" class="fancybox" data-fancybox="gallery"
+                        <a href="{{ asset($photo->photo_path) }}" class="fancybox" data-fancybox="gallery"
                           data-caption="">
-                          <img src="{{ asset($photo->before_path) }}" alt="Before After Photo" class="img-fluid"></a>
-                      </div>
-                      <div class="col-lg-3 mb-3">
-                        <a href="{{ asset($photo->after_path) }}" class="fancybox" data-fancybox="gallery"
-                          data-caption="">
-                          <img src="{{ asset($photo->after_path) }}" alt="Before After Photo" class="img-fluid"></a>
+                          <img src="{{ asset($photo->photo_path) }}" alt="Before After Photo" class="img-fluid"></a>
                       </div>
                     @endforeach
                   </div>

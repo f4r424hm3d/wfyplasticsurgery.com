@@ -84,6 +84,10 @@
 <script src="{{ url('front') }}/js/jquery-3.6.0.min.js"></script>
 <script src="{{ url('front') }}/js/common_scripts.min.js"></script>
 <script src="{{ url('front') }}/js/functions.js"></script>
+<!-- Zoom -->
+<link rel="stylesheet" href="{{ url('front') }}/fancybox/jquery.fancybox.min.css" />
+<script src="{{ url('front') }}/fancybox/jquery.fancybox.min.js"></script>
+<!-- Zoom End -->
 </body>
 
 </html>
