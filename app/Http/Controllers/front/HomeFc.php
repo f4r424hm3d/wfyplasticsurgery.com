@@ -5,6 +5,7 @@ namespace App\Http\Controllers\front;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Country;
+use App\Models\Treatment;
 use App\Models\TreatmentCategory;
 use App\Models\TreatmentTestimonial;
 use Illuminate\Http\Request;
@@ -39,7 +40,8 @@ class HomeFc extends Controller
 
     $countries = Country::orderBy('name')->get();
     $codes = Country::orderBy('phonecode')->get();
-    $data = compact('countries', 'codes', 'showName', 'showImage', 'doctor_id', 'hospital_id');
+    $treatments = Treatment::orderBy('treatment_name')->get();
+    $data = compact('countries', 'codes', 'showName', 'showImage', 'doctor_id', 'hospital_id', 'treatments');
     return view('front.get-free-quote')->with($data);
   }
   public function thankYou(Request $request)

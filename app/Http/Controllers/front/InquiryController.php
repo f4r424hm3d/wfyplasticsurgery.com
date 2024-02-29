@@ -27,7 +27,6 @@ class InquiryController extends Controller
         'age' => 'required',
         'gender' => 'required',
         'nationality' => 'required',
-        'medical_report' => 'nullable|max:5000|mimes:jpg,jpeg,pdf',
         'message' => [
           'required',
           'string',
@@ -48,20 +47,7 @@ class InquiryController extends Controller
     $field->message = $request['message'];
     $field->source = 'Sidebar Form';
     $field->page_url = $request['page_url'];
-    if ($request->hasFile('medical_report')) {
-      $fileOriginalName = $request->file('medical_report')->getClientOriginalName();
-      $fileNameWithoutExtention = pathinfo($fileOriginalName, PATHINFO_FILENAME);
-      $file_name_slug = slugify($fileNameWithoutExtention);
-      $fileExtention = $request->file('medical_report')->getClientOriginalExtension();
-      $file_name = $file_name_slug . '_' . time() . '.' . $fileExtention;
-      $move = $request->file('medical_report')->move('uploads/medical_reports/', $file_name);
-      if ($move) {
-        $field->medical_report = $file_name;
-        $field->medical_report_path = 'uploads/medical_reports/' . $file_name;
-      } else {
-        session()->flash('emsg', 'Some problem occured. File not uploaded.');
-      }
-    }
+
     $field->save();
     session()->flash('smsg', 'Your inquiry has been submitted succesfully. We will contact you soon.');
 
@@ -122,7 +108,6 @@ class InquiryController extends Controller
         'age' => 'required',
         'gender' => 'required',
         'nationality' => 'required',
-        'medical_report' => 'nullable|max:5000|mimes:jpg,jpeg,pdf',
         'message' => [
           'required',
           'string',
@@ -143,20 +128,7 @@ class InquiryController extends Controller
     $field->message = $request['message'];
     $field->source = 'Get Free Quote';
     $field->page_url = $request['page_url'];
-    if ($request->hasFile('medical_report')) {
-      $fileOriginalName = $request->file('medical_report')->getClientOriginalName();
-      $fileNameWithoutExtention = pathinfo($fileOriginalName, PATHINFO_FILENAME);
-      $file_name_slug = slugify($fileNameWithoutExtention);
-      $fileExtention = $request->file('medical_report')->getClientOriginalExtension();
-      $file_name = $file_name_slug . '_' . time() . '.' . $fileExtention;
-      $move = $request->file('medical_report')->move('uploads/medical_reports/', $file_name);
-      if ($move) {
-        $field->medical_report = $file_name;
-        $field->medical_report_path = 'uploads/medical_reports/' . $file_name;
-      } else {
-        session()->flash('emsg', 'Some problem occured. File not uploaded.');
-      }
-    }
+
 
     $field->save();
     session()->flash('smsg', 'Your inquiry has been submitted succesfully. We will contact you soon.');

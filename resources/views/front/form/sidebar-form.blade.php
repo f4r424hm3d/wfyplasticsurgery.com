@@ -1,7 +1,10 @@
 @php
   use App\Models\Country;
+  use App\Models\Treatment;
   $countries = Country::orderBy('name')->get();
   $codes = Country::orderBy('phonecode')->get();
+  $treatments = Treatment::orderBy('treatment_name')->get();
+  $ct = Request::segment(2) ?? null;
 @endphp
 <div class="box_general_3 booking">
   <div class="title">
@@ -15,8 +18,15 @@
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Treatment Name*" name="treatment_name"
-            value="{{ old('treatment_name') }}">
+          <select class="form-control form-select" name="treatment_name">
+            <option value="">Treatment</option>
+            @foreach ($treatments as $row)
+              <option value="{{ $row->treatment_name }}"
+                {{ $row->treatment_slug == $ct || old('treatment_name') == $row->treatment_name ? 'selected' : '' }}>
+                {{ $row->treatment_name }}
+              </option>
+            @endforeach
+          </select>
           @error('treatment_name')
             <span class="text-danger">{{ $message }}</span>
           @enderror
@@ -63,13 +73,8 @@
       </div>
       <div class="col-lg-12">
         <div class="form-group">
-          <select class="form-control form-select" name="nationality" required="required">
-            <option value="">Nationality (Passport) *</option>
-            @foreach ($countries as $row)
-              <option value="{{ $row->name }}" {{ old('nationality') == $row->name ? 'selected' : '' }}>
-                {{ $row->name }}</option>
-            @endforeach
-          </select>
+          <input type="text" class="form-control" placeholder="Email Address*" name="nationality" id="nationality"
+            value="{{ old('nationality') ?? 'India' }}">
           @error('nationality')
             <span class="text-danger">{{ $message }}</span>
           @enderror
@@ -77,13 +82,8 @@
       </div>
       <div class="col-lg-3">
         <div class="form-group">
-          <select class="form-control form-select" name="country_code">
-            @foreach ($codes as $row)
-              <option value="{{ $row->phonecode }}"
-                {{ old('country_code') == $row->phonecode || $row->phonecode == '91' ? 'selected' : '' }}>
-                {{ $row->name }} (+{{ $row->phonecode }})</option>
-            @endforeach
-          </select>
+          <input type="text" class="form-control" placeholder="Country Code*" name="country_code" id="country_code"
+            value="{{ old('country_code') ?? '91' }}">
           @error('country_code')
             <span class="text-danger">{{ $message }}</span>
           @enderror
@@ -107,15 +107,7 @@
           @enderror
         </div>
       </div>
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label>Upload Medical Records (jpeg, jpg, pdf)</label>
-          <div class="fileupload"><input type="file" name="medical_report"></div>
-          @error('medical_report')
-            <span class="text-danger">{{ $message }}</span>
-          @enderror
-        </div>
-      </div>
+
       <div style="position:relative;"><input type="submit" class="btn_1 full-width" value="Get Free Quotation">
       </div>
   </form>
