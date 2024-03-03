@@ -219,7 +219,7 @@
           </div>
         </div>
       </div>
-      <p class="text-center"><a href="treatments.html" class="btn_1 medium">View All Treatments</a></p>
+      <p class="text-center"><a href="treatments.html" class="btn_1 medium newbttn">View All Treatments</a></p>
     </div>
 
     <div id="hero_register">
@@ -250,7 +250,7 @@
               <p>Join the meeting and a proper consultation is conducted by the doctor during your assigned time slot.
                 Doctor will provide a diagnosis and treatment plan for your condition.</p>
             </div>
-            <a href="get-free-quote.html" class="btn_1 medium mb-4">Schedule FREE Live Tele Consultations <i
+            <a href="#" class="btn_1 medium mb-4 newbttn">Schedule Your Appointment <i
                 class="fs1" style="top:3px; position:relative" aria-hidden="true" data-icon="$"></i></a>
           </div>
 
@@ -263,6 +263,65 @@
         </div>
       </div>
     </div>
+    <div class="container margin_60_35">
+<div class="main_title mb-4">
+<h2>Our Work <strong> in Gallery</strong></h2>
+</div>
+
+<div class="row">
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Face Surgery</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Face Surgery</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Face Surgery</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Face Surgery</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Face Surgery</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Cheek Dimple</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Breast Reduction</h6></div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box_list wow fadeIn animated">
+<figure class="h-auto"><img src="https://wfyplasticsurgery.com/uploads/gallery/untitled-761-x-678-px-1708756916.jpg" class="img-fluid" alt="face surgery gallery"></figure>
+<div class="wrapper p-3" style="border-top: 1px solid #ededed;"><h6 class="mb-0 text-center">Smile Correction</h6></div>
+</div>
+</div>      <p class="text-center"><a href="treatments.html" class="btn_1 medium newbttn">View Full Gallery</a></p>
+
+</div>
+
+</div>
+
     @if ($testimonials->count() > 0)
       <div class="bg_color_1">
         <div class="container margin_60_35">
@@ -290,9 +349,44 @@
             @endforeach
           </div>
         </div>
-        <p class="text-center"><a href="{{ url('testimonials') }}" class="btn_1 medium">View All Feedbacks</a></p><br>
+        <p class="text-center"><a href="{{ url('testimonials') }}" class="btn_1 medium newbttn">View All Feedbacks</a></p><br>
       </div>
     @endif
+    
+<div class="bg_color_1">
+<div class="container margin_60_35">
+<div class="row text-center">
+<div class="col-lg-3 col-md-3 col-6">
+<div class="counter customcard">
+<img src="{{ url('front') }}/img/icons/our-treatments.png" alt="our services">
+<h2 class="timer count-title count-number" data-to="50" data-speed="1500"></h2>
+<p class="count-text">Our Services</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-6">
+<div class="counter customcard">
+<img src="{{ url('front') }}/img/icons/our-treatments.png" alt="our services">
+<h2 class="timer count-title count-number" data-to="800" data-speed="1500"></h2>
+<p class="count-text">Satisfied Patients</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-6">
+<div class="counter customcard">
+<img src="{{ url('front') }}/img/icons/our-treatments.png" alt="our services">
+<h2 class="timer count-title count-number" data-to="8" data-speed="1500"></h2>
+<p class="count-text">Clinical experience</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-6">
+<div class="counter customcard">
+<img src="{{ url('front') }}/img/icons/our-treatments.png" alt="our services">
+<h2 class="timer count-title count-number" data-to="225" data-speed="1500"></h2>
+<p class="count-text ">Cured Patients</p>
+</div>
+</div>
+</div>
+</div>
+</div>
     <div class="container margin_60_35">
       <div class="main_title">
         <h2>Why <strong>Choose WYF</strong> Plastic Surgery</h2>
@@ -373,38 +467,5 @@
         </div>
       </div>
     @endif
-
-    <div id="app_section">
-      <div class="container">
-        <div class="row justify-content-around">
-          <div class="col-md-5">
-            <p><img src="{{ url('front') }}/img/app_img.svg" alt="" class="img-fluid" width="500"
-                height="433"></p>
-          </div>
-          <div class="col-md-6">
-            <small>Application</small>
-            <h3>Download <strong>Findoctor App</strong> Now!</h3>
-            <p class="lead">Tota omittantur necessitatibus mei ei. Quo paulo perfecto eu, errem percipit ponderum
-              no eos. Has eu mazim sensibus. Ad nonumes dissentiunt qui, ei menandri electram eos. Nam iisque
-              consequuntur cu.</p>
-            <div class="app_buttons wow" data-wow-offset="100">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                y="0px" viewBox="0 0 43.1 85.9" style="enable-background:new 0 0 43.1 85.9;" xml:space="preserve">
-                <path stroke-linecap="round" stroke-linejoin="round" class="st0 draw-arrow"
-                  d="M11.3,2.5c-5.8,5-8.7,12.7-9,20.3s2,15.1,5.3,22c6.7,14,18,25.8,31.7,33.1" />
-                <path stroke-linecap="round" stroke-linejoin="round" class="draw-arrow tail-1"
-                  d="M40.6,78.1C39,71.3,37.2,64.6,35.2,58" />
-                <path stroke-linecap="round" stroke-linejoin="round" class="draw-arrow tail-2"
-                  d="M39.8,78.5c-7.2,1.7-14.3,3.3-21.5,4.9" />
-              </svg>
-              <a href="javascript:void()" class="fadeIn"><img src="{{ url('front') }}/img/apple_app.png"
-                  alt="" width="150" height="50" data-retina="true"></a>
-              <a href="javascript:void()" class="fadeIn"><img src="{{ url('front') }}/img/google_play_app.png"
-                  alt="" width="150" height="50" data-retina="true"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
 @endsection

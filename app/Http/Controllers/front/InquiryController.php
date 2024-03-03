@@ -16,6 +16,7 @@ class InquiryController extends Controller
     // die;
     $request->validate(
       [
+        'g-recaptcha-response' => 'required',
         'treatment_name' => 'required',
         'name' => [
           'required',
@@ -97,6 +98,7 @@ class InquiryController extends Controller
     // die;
     $request->validate(
       [
+        'g-recaptcha-response' => 'required',
         'treatment_name' => 'required',
         'name' => [
           'required',
@@ -181,6 +183,7 @@ class InquiryController extends Controller
     // die;
     $request->validate(
       [
+        'g-recaptcha-response' => 'required',
         'name' => [
           'required',
           'regex:/^[a-zA-Z\s]+$/u', // Allow only alphabetic characters and spaces

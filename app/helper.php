@@ -1,8 +1,8 @@
 <?php
 
-define('TO_EMAIL', 'farazahmad280@gmail.com');
-define('TO_NAME', 'Mohd Faraz');
-define('CC_EMAIL', '4hm3df4r42@gmail.com');
+define('TO_EMAIL', 'mhdrafay@gmail.com');
+define('TO_NAME', 'Mohd Rafay');
+define('CC_EMAIL', 'farazahmad280@gmail.com');
 define('CC_NAME', 'Mohd Faraz');
 
 if (!function_exists('printArray')) {
@@ -122,5 +122,17 @@ if (!function_exists('departmentIcon')) {
     } else {
       return asset('front/icons/department-icon.webp');
     }
+  }
+}
+if (!function_exists('gr_site_key')) {
+  function gr_site_key()
+  {
+    return "6LfzFIYpAAAAAB0ehzmZ0Cvb-lxwYgVIkB3fmXEa";
+  }
+}
+if (!function_exists('gr_secret_key')) {
+  function gr_secret_key()
+  {
+    return "6LfzFIYpAAAAAGJuUxkMra2bsDHsXXT4Te4TG0b7";
   }
 }

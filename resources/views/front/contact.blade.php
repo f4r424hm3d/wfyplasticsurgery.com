@@ -41,12 +41,15 @@
           </aside>
 
           <div class=" col-lg-8 col-md-8 ml-auto">
+            @error('g-recaptcha-response')
+              <span class="text-danger">{{ $message }}</span>
+            @enderror
             <div class="box_general">
               <h3>Get In Touch</h3>
               <p>Fill In the Form for information or a meeting!</p>
               <div>
                 <div id="message-contact"></div>
-                <form method="post" action="" id="contactform">
+                {{-- <form method="post" action="" id="contactform">
                   <div class="row">
                     <div class="col-md-6 col-sm-6">
                       <div class="form-group">
@@ -91,6 +94,56 @@
                     </div>
                   </div>
                   <input type="submit" value="Submit" class="btn_1 add_top_20" id="submit-contact">
+                </form> --}}
+                <form method="post" action="{{ url('en/contact-us') }}" id="contactForm" enctype="multipart/form-data">
+                  @csrf
+                  <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                  <input type="text" name="honeypot" style="display:none;">
+                  <input type="hidden" name="page_url" value="{{ url()->current() }}
+                  ">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Full Name*" name="name"
+                          value="{{ old('name') }}">
+                        @error('name')
+                          <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address*" name="email"
+                          id="email_booking" value="{{ old('email') }}">
+                        @error('email')
+                          <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Mobile No.*" name="mobile"
+                          value="{{ old('mobile') }}">
+                        @error('mobile')
+                          <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea rows="5" name="message" class="form-control" style="height:80px;"
+                          placeholder="Medical Concerns/Questions*">{{ old('message') }}</textarea>
+                        @error('message')
+                          <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                      </div>
+                    </div>
+                  </div>
+                  <input type="submit" value="Submit" class="btn_1 add_top_20" id="submit-contact">
                 </form>
               </div>
             </div>
@@ -100,4 +153,15 @@
     </div>
 
   </main>
+  <script>
+    grecaptcha.ready(function() {
+      grecaptcha.execute('{{ gr_site_key() }}', {
+          action: 'contact_us'
+        })
+        .then(function(token) {
+          // Set the reCAPTCHA token in the hidden input field
+          document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+  </script>
 @endsection

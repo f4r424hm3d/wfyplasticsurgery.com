@@ -20,6 +20,7 @@
   <link href="{{ url('front') }}/css/vendors.css" rel="stylesheet">
   <link href="{{ url('front') }}/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
   <link href="{{ url('front') }}/css/blog.css" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js?render={{ gr_site_key() }}"></script>
 
   <!-- Google Tag Manager -->
   <script>
@@ -43,9 +44,9 @@
 
 <body>
 
-  <div id="preloader" class="Fixed">
-    <div data-loader="circle-side"></div>
-  </div>
+  <!--<div id="preloader" class="Fixed">-->
+  <!--  <div data-loader="circle-side"></div>-->
+  <!--</div>-->
   <!-- /Preload-->
 
   <div id="page">
@@ -61,20 +62,21 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-6">
-            <div id="logo_home"><a href="index.html" title="Logo"><img src="{{ url('front') }}/img/logo.png"></a>
+          <div class="col-lg-2 col-6">
+            <div id="logo_home"><a href="{{ url('/') }}" title="Logo"><img
+                  src="{{ url('front') }}/img/logo.png"></a>
             </div>
           </div>
-          <div class="col-lg-9 col-6">
+          <div class="col-lg-10 col-6">
             <ul id="top_access" class="d-flex align-items-center">
               <li class="d-lg-block d-md-block d-xl-block d-sm-none d-xs-none d-none"><a href="tel:+918287185897"
-                  class="btn_1 text-center pt-2" style="color:#fff!important;">Free Counselling</a></li>
+                  class="btn_1 text-center pt-2 newbttn" style="color:#fff!important;">Call Now</a></li>
             </ul>
             <nav id="menu" class="main-menu">
               <ul>
                 <li><span><a href="{{ url('/') }}">Home</a></span></li>
                 <li>
-                  <span><a href="#">About Us<i class="icon-down-open-mini"></i></a></span>
+                  <span><a href="#">About<i class="icon-down-open-mini"></i></a></span>
                   <ul>
                     <li><a href="{{ url('about-us') }}">About Company</a></li>
                     <li><a href="{{ url('testimonials') }}">Testimonials</a></li>

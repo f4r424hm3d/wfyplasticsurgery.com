@@ -71,7 +71,7 @@
               <p>Join the meeting and a proper consultation is conducted by the doctor during your assigned time slot.
                 Doctor will provide a diagnosis and treatment plan for your condition.</p>
             </div>
-            <a href="#inquiry-form" class="btn_1 medium mb-4">Schedule FREE Live Tele Consultations <i class="fs1"
+            <a href="#" class="btn_1 medium mb-4 newbttn">Schedule Your Appointment <i class="fs1"
                 style="top:3px; position:relative" aria-hidden="true" data-icon="$"></i></a>
           </div>
 
