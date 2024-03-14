@@ -26,6 +26,13 @@ class HomeFc extends Controller
     $data = compact('testimonials', 'blogs');
     return view('front.about')->with($data);
   }
+  public function aboutDoctor(Request $request)
+  {
+    $testimonials = TreatmentTestimonial::limit(6)->get();
+    $blogs = Blog::limit(10)->get();
+    $data = compact('testimonials', 'blogs');
+    return view('front.about-doctor')->with($data);
+  }
   public function contactUs(Request $request)
   {
     return view('front.contact');
