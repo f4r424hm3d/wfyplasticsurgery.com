@@ -20,7 +20,6 @@
   <link href="{{ url('front') }}/css/vendors.css" rel="stylesheet">
   <link href="{{ url('front') }}/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
   <link href="{{ url('front') }}/css/blog.css" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js?render={{ gr_site_key() }}"></script>
 
   <!-- Google Tag Manager -->
   <script>
@@ -63,8 +62,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-6">
-            <div id="logo_home"><a href="{{ url('/') }}" title="Logo"><img
-                  src="{{ url('front') }}/img/logo.png"></a>
+            <div id="logo_home"><a href="{{ url('/') }}" title="Logo"><img src="{{ url('front') }}/img/logo.png"></a>
             </div>
           </div>
           <div class="col-lg-10 col-6">

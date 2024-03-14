@@ -7,7 +7,7 @@
     <div class="hero_home version_1">
       <div class="content">
         <h3>We For You - Plastic & Cosmetic Surgery in India</h3>
-        <p>Your Trusted Partner for Medical Tourism in India</p>
+        <p>A centre of excellence for Aesthetic Surgeries </p>
 
       </div>
     </div>
@@ -15,28 +15,19 @@
 
     <div class="bg_color_1">
       <div class="container margin_60_35">
-        <div class="main_title">
-          <h1>ABOUT <strong>WYF PLASTIC SURGERY</strong> INDIA</h1>
-          <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-        </div>
         <div class="row justify-content-between">
           <div class="col-lg-6">
-            <figure class="add_bottom_30"><img src="{{ url('front') }}/img/about_1.jpg" class="img-fluid" alt="">
+            <figure class="add_bottom_30"><img src="{{ url('front') }}/img/Dr. Hitesh Gupta.jpg" class="img-fluid" alt="Dr. Hitesh Gupta.jpg" style="box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;">
             </figure>
           </div>
           <div class="col-lg-6">
-            <p style="text-align: justify;">Lorem ipsum dolor sit amet, homero erroribus in cum. Cu eos scaevola
-              probatus. Nam atqui intellegat ei, sed ex graece essent delectus. Autem consul eum ea. Duo cu fabulas
-              nonumes contentiones, nihil voluptaria pro id. Has graeci deterruisset ad, est no primis detracto
-              pertinax, at cum malis vitae facilisis. Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id
-              usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones
-              ex, nihil utinam recusabo mel no. Dolores reprehendunt no sit, quo cu viris theophrastus. Sit unum
-              efficiendi cu.
-              Lorem ipsum dolor sit amet, homero erroribus in cum. Cu eos scaevola probatus. Nam atqui intellegat ei,
-              sed ex graece essent delectus. Autem consul eum ea. Duo cu fabulas nonumes contentiones, nihil
-              voluptaria pro id. Has graeci deterruisset ad, est no primis detracto pertinax, at cum malis vitae
-              facilisis.</p>
-            <h4><em>Dr. Hitesh Gupta</em></h4>
+                      <div class="main_title">
+          <h1>ABOUT <strong>WYF PLASTIC SURGERY</strong> INDIA</h1>
+        </div>
+            <p style="text-align: justify;">We for you Clinic is recognized as the Best Plastic surgery clinic in Delhi. Dr. Hitesh started this clinic with the aim of providing a wholesome Plastic Surgery experience and all aesthetics under one roof. We provide high quality, extremely sophisticated procedures that give our patients the bodies they aspire for.  </p>
+             <p style="text-align: justify;"> We will take care of you with the highest level of professionalism and always provide you with the most incredible results. Just reach out to us and tell us about your dreams, and we’ll turn them into reality. Each and every equipment and material used by us conforms to international standards. </p>
+            <h4 class="text-center"><em>Dr. Hitesh Gupta</em><br><span style="font-size:14px">MBBS, MS, MCh (Plastic Surgery), MRCS (England)</span></h4>
           </div>
         </div>
       </div>
@@ -45,32 +36,25 @@
     <div class="bg_color_1">
       <div class="container margin_60_35">
         <div class="main_title">
-          <h2>Discover the <strong>online</strong> appointment!</h2>
-          <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed
-            ad debet scaevola, ne mel.</p>
+          <h2>Discover <strong>online</strong> appointment!</h2>
+          <p>Unlock the Convenience: Discover Online Appointment Booking!</p>
         </div>
         <div class="row">
           <div class="col-lg-4">
             <div class="box_feat" id="icon_1">
               <span></span>
               <h3>Find the Procedure</h3>
-              <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.
-              </p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box_feat" id="icon_2">
               <span></span>
               <h3>View Details</h3>
-              <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.
-              </p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box_feat" id="icon_3">
-              <h3>Book a visit</h3>
-              <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.
-              </p>
+              <h3>Book an Appointment</h3>
             </div>
           </div>
         </div>

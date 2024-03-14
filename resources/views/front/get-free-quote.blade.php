@@ -18,13 +18,9 @@
             </div>
           @endif
           <div class="col-md-8">
-            @error('g-recaptcha-response')
-              <span class="text-danger">{{ $message }}</span>
-            @enderror
             <form method="post" action="{{ url('enquiry/get-free-quote') }}" id="bookin"
               enctype="multipart/form-data">
               @csrf
-              <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
               <input type="hidden" name="page_url" value="{{ url()->current() }}">
               <input type="hidden" name="doctor_id" value="{{ $doctor_id }}">
               <input type="hidden" name="hospital_id" value="{{ $hospital_id }}">
@@ -77,7 +73,7 @@
                 </div>
                 <div class="col-lg-4">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nationality*" name="nationality"
+                    <input type="text" class="form-control" placeholder="Email Address*" name="nationality"
                       id="nationality" value="{{ old('nationality') ?? 'India' }}">
                     @error('nationality')
                       <span class="text-danger">{{ $message }}</span>
@@ -133,15 +129,4 @@
     </div>
 
   </main>
-  <script>
-    grecaptcha.ready(function() {
-      grecaptcha.execute('{{ gr_site_key() }}', {
-          action: 'contact_us'
-        })
-        .then(function(token) {
-          // Set the reCAPTCHA token in the hidden input field
-          document.getElementById('g-recaptcha-response').value = token;
-        });
-    });
-  </script>
 @endsection
