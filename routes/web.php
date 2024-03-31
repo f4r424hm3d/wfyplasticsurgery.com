@@ -105,7 +105,8 @@ Route::get('/f/migrate', function () {
 /* FRONT ROUTE */
 Route::get('/', [HomeFc::class, 'index']);
 Route::get('/about-us', [HomeFc::class, 'about']);
-Route::get('/about-doctor', [HomeFc::class, 'aboutDoctor']);
+//Route::get('/about-doctor', [HomeFc::class, 'aboutDoctor']);
+Route::get('/about-dr-hitesh-gupta', [HomeFc::class, 'aboutDoctor']);
 Route::get('/contact-us', [HomeFc::class, 'contactUs']);
 Route::get('/thank-you', [HomeFc::class, 'thankYou']);
 Route::get('get-free-quote', [HomeFc::class, 'getFreeQuote']);
