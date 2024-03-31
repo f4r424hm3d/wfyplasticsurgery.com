@@ -21,9 +21,9 @@
             <div class="container">
               <ul class="clearfix vertically-scrollbar">
                 <li><a href="#section_1" class="active">Overview</a></li>
-                <li><a href="#section_2">Treatments</a></li>
                 <li><a href="#section_4">Facilities</a></li>
                 <li><a href="#section_5">Gallery</a></li>
+                <li><a href="#section_2">Treatments</a></li>
                 <li><a href="#section_6">Testimonials</a></li>
                 <li><a href="#section_7">Faqs</a></li>
               </ul>
@@ -52,24 +52,6 @@
 
             </div>
           </div>
-
-          @if ($treatment->siblings->count() > 0)
-            <div id="section_2">
-              <div id="detail-title">
-                <div class="container">Related Treatments</div>
-              </div>
-              <div class="col-12">
-                <div class="related-box">
-                  <div class="text view-all-height">
-                    @foreach ($treatment->siblings as $row)
-                      <a href="{{ url('treatment/' . $row->treatment_slug) }}">{{ $row->treatment_name }}</a>
-                    @endforeach
-                  </div>
-                  <div class="view-all">(View All)</div>
-                </div>
-              </div>
-            </div>
-          @endif
 
           @if ($treatment->facilities->count() > 0)
             <div id="section_4">
@@ -123,6 +105,24 @@
                       @endforeach
                     @endif
                   </div>
+                </div>
+              </div>
+            </div>
+          @endif
+          
+          @if ($treatment->siblings->count() > 0)
+            <div id="section_2">
+              <div id="detail-title">
+                <div class="container">Related Treatments</div>
+              </div>
+              <div class="col-12">
+                <div class="related-box">
+                  <div class="text view-all-height">
+                    @foreach ($treatment->siblings as $row)
+                      <a href="{{ url('treatment/' . $row->treatment_slug) }}">{{ $row->treatment_name }}</a>
+                    @endforeach
+                  </div>
+                  <div class="view-all">(View All)</div>
                 </div>
               </div>
             </div>
@@ -229,7 +229,7 @@
               <p>Join the meeting and a proper consultation is conducted by the doctor during your assigned time slot.
                 Doctor will provide a diagnosis and treatment plan for your condition.</p>
             </div>
-            <a href="#inquiry-form" class="btn_1 medium mb-4">Schedule FREE Live Tele Consultations <i class="fs1"
+            <a href="https://www.wfyplasticsurgery.com/get-free-quote" class="btn_1 medium mb-4">Schedule FREE Live Tele Consultations <i class="fs1"
                 style="top:3px; position:relative" aria-hidden="true" data-icon="$"></i></a>
           </div>
 

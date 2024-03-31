@@ -10,9 +10,9 @@
           @if ($showName != '')
             <div class="col-md-4">
               <div class="box_list wow fadeIn animated animated">
-                <figure style="height:auto"><img src="{{ $showImage }}" class="img-fluid" alt=""></figure>
+                <figure style="height:auto"><img src="https://www.wfyplasticsurgery.com/front/img/Dr.%20Hitesh%20Gupta.jpg" class="img-fluid" alt=""></figure>
                 <div class="wrapper text-center">
-                  <h3 class="mb-0">Get free quote to {{ $showName }}</h3>
+                  <h3 class="mb-0">Start Counselling with WFY Plastic Surgery</h3>
                 </div>
               </div>
             </div>

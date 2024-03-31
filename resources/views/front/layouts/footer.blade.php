@@ -8,16 +8,15 @@
               class="img-fluid">
           </a>
         </p>
-        <p>Tota omittantur necessitatibus mei ei. Quo paulo perfecto eu, errem percipit ponderum no eos. Has eu
-          mazim sensibus. Ad nonumes dissentiunt qui, ei menandri electram eos. Nam iisque consequuntur cu.
+        <p>WFY Plastic Surgery is one of the renowned medical centers in Delhi offering world-class and most advanced plastic surgeries procedures under the guidance of Dr. Hitesh Gupta.
         </p>
       </div>
       <div class="col-lg-4 col-md-4">
         <h5>Contact with Us</h5>
         <ul class="contacts">
           <li><a href="tel:+918287185897"><i class="icon_mobile"></i> +91-8287 185 897</a></li>
-          <li><a href="mailto:info@example.com"><i class="icon_mail_alt"></i> help@example.com</a></li>
-          <p><i class="icon_map"></i> 453 ground floor, Malubu Town, Sector 47, Gurugram</p>
+          <li><a href="mailto:info@wfyplasticsurgery.com"><i class="icon_mail_alt"></i> info@wfyplasticsurgery.com</a></li>
+          <p><i class="icon_map"></i> B-5/238, Pocket 17, Sector 7, Rohini, Delhi, 110085</p>
         </ul>
         <div class="follow_us">
           <h5>Follow us</h5>
@@ -34,19 +33,22 @@
       <div class="col-lg-2 col-md-4">
         <h5>About</h5>
         <ul class="links">
-          <li><a href="{{ url('about-us') }}">About us</a></li>
+          <li><a href="{{ url('about-us') }}">About Us</a></li>
+          <li><a href="{{ url('before-after') }}">Photos Gallery</a></li>
+          <li><a href="{{ url('testimonials') }}">Testimonials</a></li>
+          <li><a href="{{ url('contact-us') }}">Contact Us</a></li>
+          <li><a href="{{ url('faqs') }}">FAQ's</a></li>
           <li><a href="{{ url('blog') }}">Blog</a></li>
-          <li><a href="{{ url('faqs') }}">FAQ</a></li>
         </ul>
       </div>
       <div class="col-lg-2 col-md-4">
         <h5>Useful links</h5>
         <ul class="links">
-          <li><a href="#0">Doctors</a></li>
-          <li><a href="#0">Clinics</a></li>
-          <li><a href="#0">Specialization</a></li>
-          <li><a href="#0">Join as a Doctor</a></li>
-          <li><a href="#0">Download App</a></li>
+          <li><a href="#0">About Doctor</a></li>
+          <li><a href="#0">Facelift Surgery</a></li>
+          <li><a href="#0">Hair Transplant</a></li>
+          <li><a href="#0">Chin Surgery</a></li>
+          <li><a href="#0">Lip Reduction Surgery</a></li>
         </ul>
       </div>
     </div>
@@ -56,8 +58,8 @@
       <div class="col-md-8">
         <ul id="additional_links">
           <li>Copyright © 2024-25 all rights reserved</li>
-          <li><a href="{{ url('terms-and-conditions') }}">Terms and conditions</a></li>
-          <li><a href="{{ url('privacy') }}">Privacy</a></li>
+          <li><a href="{{ url('terms-and-conditions') }}">Terms & Conditions</a></li>
+          <li><a href="{{ url('privacy') }}">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="col-md-4">
@@ -73,7 +75,7 @@
 <div id="toTop"></div>
 <!-- Back to top button -->
 
-<a href="{{ url('get-free-quote') }}" class="get-inquiry"><span>Get a Free Quote</span></a>
+<a href="{{ url('get-free-quote') }}" class="get-inquiry"><span>Book Appointment</span></a>
 <!-- Free Quote button -->
 
 <a href="tel:+918287185897" class="live-tele d-lg-none d-md-none d-xl-none d-sm-block d-xs-block"><span>Talk to

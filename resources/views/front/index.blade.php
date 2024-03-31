@@ -70,135 +70,123 @@
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Dental Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Breast Augmentation</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Plastic Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Chin Augmentation</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="box_cat_home">
-            <i class="icon-info-4"></i>
             <img src="{{ url('front') }}/img/icon_cat_2.svg" width="60" height="60" alt="">
             <h3>Rhinoplasty Surgery</h3>
             <ul class="clearfix">
-              <li><a href="procedure.html">View Detials</a></li>
-              <li><a href="get-free-quote.html">Book Now</a></li>
+              <li><a href="#">View Detials</a></li>
+              <li><a href="https://www.wfyplasticsurgery.com/get-free-quote">Book Now</a></li>
             </ul>
           </div>
         </div>
@@ -337,8 +325,8 @@
       </div>
     @endif
     
-<div class="bg_color_1">
 <div class="container margin_60_35">
+  <div class="container margin_60_35">
 <div class="row text-center">
 <div class="col-lg-3 col-md-3 col-6">
 <div class="counter customcard">
@@ -370,59 +358,50 @@
 </div>
 </div>
 </div>
-</div>
-    <div class="container margin_60_35">
       <div class="main_title">
-        <h2>Why <strong>Choose WYF</strong> Plastic Surgery</h2>
-        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        <h2>WHY <strong>CHOOSE WYF PLASTIC SURGERY</strong> INDIA</h2>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <a class="box_feat_about" href="javascript:void()">
             <i class="pe-7s-id"></i>
-            <h3>+ 5575 Doctors</h3>
-            <p>Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii
-              option, cu sit mazim libris.</p>
+            <h3>Globally Certified</h3>
+            <p>A team of internationally trained plastic surgeons & medical doctors.</p>
           </a>
         </div>
         <div class="col-lg-4 col-md-6">
           <a class="box_feat_about" href="javascript:void()">
             <i class="pe-7s-help2"></i>
-            <h3>H24 Support</h3>
-            <p>Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii
-              option, cu sit mazim libris. </p>
+            <h3>Priority: Patients First</h3>
+            <p>Patient’s comfort, safety and confidentiality are our utmost priority.</p>
           </a>
         </div>
         <div class="col-lg-4 col-md-6">
           <a class="box_feat_about" href="javascript:void()">
             <i class="pe-7s-date"></i>
-            <h3>Instant Booking</h3>
-            <p>Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii
-              option, cu sit mazim libris.</p>
+            <h3>Strategic Planning</h3>
+            <p>Planning is given equal importance as the procedure itself to align with patient goals.</p>
           </a>
         </div>
         <div class="col-lg-4 col-md-6">
           <a class="box_feat_about" href="javascript:void()">
             <i class="pe-7s-headphones"></i>
-            <h3>Help Direct Line</h3>
-            <p>Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii
-              option, cu sit mazim libris. </p>
+            <h3>Full Medical Care</h3>
+            <p>Comprehensive medical support during and after the surgery.</p>
           </a>
         </div>
         <div class="col-lg-4 col-md-6">
           <a class="box_feat_about" href="javascript:void()">
             <i class="pe-7s-credit"></i>
-            <h3>Secure Payments</h3>
-            <p>Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii
-              option, cu sit mazim libris.</p>
+            <h3>Modern Facility</h3>
+            <p>Convenient location, state-of-the-art facility with modern infrastructure.</p>
           </a>
         </div>
         <div class="col-lg-4 col-md-6">
           <a class="box_feat_about" href="javascript:void()">
             <i class="pe-7s-chat"></i>
-            <h3>Support via Chat</h3>
-            <p>Id mea congue dictas, nec et summo mazim impedit. Vim te audiam impetus interpretaris, cum no alii
-              option, cu sit mazim libris. </p>
+            <h3>Premium Comfort</h3>
+            <p>Excellent amenities, guest rooms and hygienic surroundings.</p>
           </a>
         </div>
       </div>

@@ -76,9 +76,10 @@
                 <li>
                   <span><a href="#">About<i class="icon-down-open-mini"></i></a></span>
                   <ul>
-                    <li><a href="{{ url('about-us') }}">About Company</a></li>
+                    <li><a href="{{ url('about-us') }}">About WFY Plastic Surgery</a></li>
+                    <li><a href="{{ url('about-dr-hitesh-gupta') }}">About Dr. Hitesh Gupta</a></li>
                     <li><a href="{{ url('testimonials') }}">Testimonials</a></li>
-                    <li><a href="{{ url('blog') }}">Blog</a></li>
+                    <li><a href="{{ url('blog') }}">Blogs & Articles</a></li>
                     <li><a href="{{ url('faqs') }}">FAQs</a></li>
                   </ul>
                 </li>
@@ -104,7 +105,7 @@
                     </ul>
                   </li>
                 @endforeach
-                <li><span><a href="{{ url('contact-us') }}">Contact</a></span></li>
+                <li><span><a href="{{ url('contact-us') }}">Contact us</a></span></li>
               </ul>
             </nav>
           </div>
